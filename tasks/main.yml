@@ -1,0 +1,20 @@
+---
+- name: Download Bitwarden CLI
+  get_url:
+    url: "{{ bitwarden_cli_url }}"
+    dest: "{{ bitwarden_cli_dest }}"
+    mode: '0644'
+  tags: download_bitwarden_cli
+
+- name: Unzip Bitwarden CLI
+  unarchive:
+    src: "{{ bitwarden_cli_dest }}"
+    dest: "/tmp/"
+    remote_src: yes
+  tags: unzip_bitwarden_cli
+
+- name: Move Bitwarden CLI binary to /usr/local/bin
+  command: mv /tmp/bws /usr/local/bin/bws
+  args:
+    creates: "{{ bitwarden_cli_bin }}"
+  tags: move_bitwarden_cli

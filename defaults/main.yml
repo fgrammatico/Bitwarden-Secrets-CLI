@@ -1,0 +1,4 @@
+# defaults/main.yml
+bitwarden_cli_url: "https://github.com/bitwarden/sdk/releases/download/bws-v1.0.0/bws-x86_64-unknown-linux-gnu-1.0.0.zip"
+bitwarden_cli_dest: "/tmp/bws-x86_64-unknown-linux-gnu-1.0.0.zip"
+bitwarden_cli_bin: "/usr/local/bin/bws"
