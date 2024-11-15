@@ -1,4 +1,4 @@
 
 - hosts: localhost
   roles:
-    - Bitwarden-CLI
+    - Bitwarden-Secrets-CLI
